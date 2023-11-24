@@ -53,18 +53,18 @@
 //             console.log('fin del juego');
 //           }
 
-    function jugar(opcionUsuario) {
-  const opciones = ['piedra', 'papel', 'tijera'];
-  const opcionComputadora = opciones[Math.floor(Math.random() * 3)];
+    function jugar (opcionUsuario, opcionComputadora) {
+  let opciones = ['piedra', 'papel', 'tijera'];
+  let compu = opcionComputadora = opciones[Math.floor(Math.random() * 3)];
 
   let resultado = '';
 
-  if (opcionUsuario === opcionComputadora) {
+  if (opcionUsuario === compu) {
     resultado = '¡Es un empate!';
   } else if (
-    (opcionUsuario === 'piedra' && opcionComputadora === 'tijera') ||
-    (opcionUsuario === 'papel' && opcionComputadora === 'piedra') ||
-    (opcionUsuario === 'tijera' && opcionComputadora === 'papel')
+    (opcionUsuario === 'piedra' && compu === 'tijera') ||
+    (opcionUsuario === 'papel' && compu === 'piedra') ||
+    (opcionUsuario === 'tijera' && compu === 'papel')
   ) {
     resultado = '¡Ganaste!';
   } else {
